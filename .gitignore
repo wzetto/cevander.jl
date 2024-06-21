@@ -8,23 +8,32 @@ examples/mc/*
 examples/sqs/*
 !examples/sqs/.gitkeep
 
-examples/sqs/*
-!examples/sqs/.gitkeep
-
-data/kpoints/*
-!data/kpoints/.gitkeep
+# data/kpoints/*
+# !data/kpoints/.gitkeep
 
 data/dft/*
 !data/dft/.gitkeep
 
-data/fcc/*
-!data/fcc/.gitkeep
+data/fcc/32/*
+!data/fcc/32/.gitkeep
 
-data/coef/*
-!data/coef/.gitkeep
+data/fcc/256/*
+!data/fcc/256/.gitkeep
 
-data/cluster/*
-!data/cluster/.gitkeep
+data/fcc/192/*
+!data/fcc/192/.gitkeep
 
-src/*
-!src/.gitkeep
+data/fcc/500/*
+!data/fcc/500/.gitkeep
+
+# data/fcc/108/*
+# !data/fcc/108/.gitkeep
+
+# data/coef/*
+# !data/coef/.gitkeep
+
+# data/cluster/*
+# !data/cluster/.gitkeep
+
+# src/*
+# !src/.gitkeep
