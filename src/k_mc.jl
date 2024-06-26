@@ -1,6 +1,5 @@
 module k_mc
 
-    using PyPlot
     using LinearAlgebra
     using Random
     using IterTools

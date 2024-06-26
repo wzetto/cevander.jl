@@ -1,6 +1,6 @@
 test.ipynb
 test_py.ipynb
-demo.ipynb
+# demo.ipynb
 
 examples/mc/*
 !examples/mc/.gitkeep
