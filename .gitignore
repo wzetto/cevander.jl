@@ -17,8 +17,8 @@ data/dft/*
 data/fcc/32/*
 !data/fcc/32/.gitkeep
 
-data/fcc/256/*
-!data/fcc/256/.gitkeep
+# data/fcc/256/*
+# !data/fcc/256/.gitkeep
 
 data/fcc/192/*
 !data/fcc/192/.gitkeep

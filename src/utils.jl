@@ -85,7 +85,7 @@ module Utils
 
     function vec2str(compo_vec)
         compo_denote = join(convert(Vector{Int64}, round.(compo_vec*100),), "")
-        if compo_vec[1]+compo_vec[2] > 0.5
+        if compo_vec[1]+compo_vec[2] > 0.5 || maximum(compo_vec.-0.5) > 0
             println("WARNING: composition outside the interpolation range, result may be inaccurate")
         end
         return compo_denote
