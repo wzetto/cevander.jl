@@ -29,7 +29,7 @@ module r_sqs
     function basis_symoperator(config_info::config,
         cluster_type::String)
         """
-        return degeneracy term of basis correlation function
+        return degeneracy term of basis function
         """
         basis_norm_dict_ = config_info.basis_norm_dict
         norm_basis_ind = basis_norm_dict_[cluster_type]

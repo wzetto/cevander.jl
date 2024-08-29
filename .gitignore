@@ -26,6 +26,8 @@ data/fcc/192/*
 data/fcc/500/*
 !data/fcc/500/.gitkeep
 
+data/coef/regr_best_mix_108_192_32_240623.pkl
+
 # data/fcc/108/*
 # !data/fcc/108/.gitkeep
 

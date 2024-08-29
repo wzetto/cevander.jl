@@ -40,12 +40,11 @@ module Utils
         @assert abs(sum(compo_list)-1) < 0.001 "Make sure the atomic contents sum up to 1"
 
         """
-        Recommend to use mode "int" if the expectated number for all the elements are integers
-        or some of elements are of zero content
+        Recommend to use mode "int" if the expected number of composed elements are all in integer
         """
         
         if !isdir("data/fcc/$(num_cell)")
-            println("WARNING: cell's information not detected, default to 108")
+            println("WARNING: structural information not detected, default to 108-atom cell")
             num_cell = 108
         end
 
