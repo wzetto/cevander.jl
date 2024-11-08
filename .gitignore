@@ -39,3 +39,5 @@ data/coef/regr_best_mix_108_192_32_240623.pkl
 
 # src/*
 # !src/.gitkeep
+
+archive
