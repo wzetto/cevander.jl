@@ -6,7 +6,7 @@ module Utils
 
     export phi_vec, ele_list_gen, eval_mix, ϕ1, ϕ2, ϕ3, ϕ4, vec2str
 
-    #* basis function for 5-dimension vector space
+    #* basis function for 5-dimension vector space (J. Phys. Soc. Jpn. 88, 044803 (2019))
     #* this aims to construct a 4-dimension subspace to avoid the zero-expectation value problem
 
     function ϕ1(σ)
