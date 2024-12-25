@@ -42,10 +42,6 @@ module k_mc
     end 
 
     function lattice_ft(σ_buffer, k_list, origin_coord)
-
-        """
-        return N_k x L_sigma matrix
-        """
         n = size(σ_buffer, 2)
         k_spin = 1/n*(exp.(im.*((k_list*origin_coord')))*σ_buffer')
         return k_spin
@@ -59,6 +55,7 @@ module k_mc
         σ_4 = ϕ4(σ_buffer)
         σ_all = [σ_1, σ_2, σ_3, σ_4]
 
+        #* k-pair {k, k*}
         k_spin_1 = lattice_ft(σ_1, pairmesh, ind_real)
         k_spin_2 = lattice_ft(σ_2, pairmesh, ind_real)
         k_spin_3 = lattice_ft(σ_3, pairmesh, ind_real)
@@ -80,7 +77,7 @@ module k_mc
 
         k_pair = vcat(k_pair...)'
 
-        #* 3-body part
+        #* k-triplet {k1*, k2*, k1+k2}
         dim_tripmat = Int64(size(tripmesh, 1)*(size(tripmesh, 1)-1)/2)
         trip_1, trip_2, trip_3 = zeros((dim_tripmat, 3)), zeros((dim_tripmat, 3)), zeros((dim_tripmat, 3))
         corfunc_trip = zeros((0, size(σ_buffer, 1)))

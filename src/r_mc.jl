@@ -24,7 +24,7 @@ module r_mc
                                 spin_list::Vector{Float64},
                                 spin_map_dict=Dict{Int64, String}(1 => "p", -1 => "n"))
         """
-        return degeneracy term of cluster correlation function
+        return degeneracy term of cluster based on point group symmetry
         """
         cluster_norm_dict = config_info.cluster_norm_dict
         spin_denote = join([spin_map_dict[spin_list[i]/abs(spin_list[i])]*"$(Int(abs(spin_list[i])))" for i in 1:length(spin_list)], "")
@@ -36,7 +36,7 @@ module r_mc
     function basis_symoperator(config_info::config,
                             cluster_type::String)
         """
-        return degeneracy term of basis correlation function
+        return degeneracy term of basis function based on point group symmetry
         """
         basis_norm_dict_ = config_info.basis_norm_dict
         norm_basis_ind = basis_norm_dict_[cluster_type]

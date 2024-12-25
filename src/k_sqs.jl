@@ -47,10 +47,6 @@ module k_sqs
     end 
 
     function lattice_ft(k_list, origin_coord)
-
-        """
-        return N_k x L_sigma matrix
-        """
         k_spin = sum(exp.(im.*((k_list*origin_coord'))), dims=2)/size(origin_coord, 1)
         return k_spin
     end
@@ -60,7 +56,7 @@ module k_sqs
         σ_all = pointcpr_sqs(compo)
         σ_1, σ_2, σ_3, σ_4 = σ_all
 
-        #* single k-point
+        #* k-pair {k, k*}
         k_spin_1 = lattice_ft(pairmesh, ind_real)*σ_1
         k_spin_2 = lattice_ft(pairmesh, ind_real)*σ_2
         k_spin_3 = lattice_ft(pairmesh, ind_real)*σ_3
@@ -82,7 +78,7 @@ module k_sqs
 
         k_pair = vcat(k_pair...)'
 
-        #* 3-body part
+        #* k-triplet {k1*, k2*, k1+k2}
         dim_tripmat = Int64(size(tripmesh, 1)*(size(tripmesh, 1)-1)/2)
         trip_1, trip_2, trip_3 = zeros((dim_tripmat, 3)), zeros((dim_tripmat, 3)), zeros((dim_tripmat, 3))
         corfunc_trip = zeros(0)
